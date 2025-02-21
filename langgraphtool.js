@@ -46,7 +46,7 @@ const tools = [calculatorTool];
 const llmWithTools = llm.bind({ tools });
 
 // Example usage
-async function testCalculator() {
+async function testCalculatorCalling() {
     try {
         const result = await llmWithTools.invoke([
             new SystemMessage("You are a helpful math assistant. Use the calculator tool when needed."),
@@ -58,7 +58,7 @@ async function testCalculator() {
     }
 }
 
-// testCalculator();
+// testCalculatorCalling();
 
 
-export { testCalculator };
+export { calculatorTool, testCalculatorCalling };
